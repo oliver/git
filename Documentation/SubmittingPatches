@@ -184,12 +184,14 @@ lose tabs that way if you are not careful.
 
 It is a common convention to prefix your subject line with
 [PATCH].  This lets people easily distinguish patches from other
-e-mail discussions.  Use of additional markers after PATCH and
-the closing bracket to mark the nature of the patch is also
-encouraged.  E.g. [PATCH/RFC] is often used when the patch is
-not ready to be applied but it is for discussion, [PATCH v2],
-[PATCH v3] etc. are often seen when you are sending an update to
-what you have previously sent.
+e-mail discussions.  Use of markers in addition to PATCH within
+the brackets to describe the nature of the patch is also
+encouraged.  E.g. [RFC PATCH] is often used when the patch is not
+ready to be applied but it is for discussion, and can be added
+with the `--rfc` argument to `git format-patch` or `git
+send-email`, while [PATCH v2], [PATCH v3] etc.  are often seen
+when you are sending an update to what you have previously sent,
+and can be added with the `-v <n>` arguments to the same commands.
 
 "git format-patch" command follows the best current practice to
 format the body of an e-mail message.  At the beginning of the
