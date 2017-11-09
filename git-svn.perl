@@ -1289,6 +1289,7 @@ sub cmd_show_ignore {
 		$s =~ s/[\r\n]+/\n/g;
 		$s =~ s/^\n+//;
 		chomp $s;
+		if (!$s) return;
 		$s =~ s#^#$path#gm;
 		print STDOUT "$s\n";
 	});
